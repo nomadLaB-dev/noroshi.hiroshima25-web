@@ -1,0 +1,94 @@
+.section {
+    padding: 8rem 1.5rem;
+    /* py-32 px-6 */
+}
+
+.container {
+    max-width: 72rem;
+    /* max-w-6xl */
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2.25rem;
+    /* text-4xl */
+    font-weight: 900;
+    font-style: italic;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 3rem;
+        /* md:text-5xl */
+    }
+}
+
+.grid {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card {
+    padding: 3rem;
+    border-radius: 40px;
+    border-left-width: 8px;
+    border-left-style: solid;
+}
+
+.cardLeft {
+    border-left-color: #4b2d8e;
+}
+
+.cardGold {
+    border-left-color: #e6b422;
+}
+
+.iconWrapperPurple,
+.iconWrapperGold {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.iconWrapperPurple {
+    background-color: rgba(75, 45, 142, 0.2);
+}
+
+.iconWrapperGold {
+    background-color: rgba(230, 180, 34, 0.2);
+}
+
+.cardTitlePurple {
+    font-size: 1.5rem;
+    /* text-2xl */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #d8b4fe;
+    /* text-purple-300 */
+}
+
+.cardTitleGold {
+    font-size: 1.5rem;
+    /* text-2xl */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #eab308;
+    /* text-yellow-500 */
+}
+
+.cardDescription {
+    color: #94a3b8;
+    /* text-slate-400 */
+    line-height: 1.625;
+}

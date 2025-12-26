@@ -1,0 +1,55 @@
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: rgba(15, 10, 26, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem 1.5rem;
+}
+
+.container {
+    max-width: 80rem;
+    /* max-w-7xl */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    /* text-xl */
+    font-weight: 900;
+    /* font-black */
+    letter-spacing: -0.05em;
+    /* tracking-tighter */
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    /* text-sanfrecce-gradient equivalent */
+    background: linear-gradient(135deg, #a78bfa, var(--sanfrecce-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.badge {
+    padding: 0.25rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    /* text-xs */
+    font-weight: 700;
+    /* font-bold */
+    letter-spacing: 0.1em;
+    /* tracking-widest */
+    text-transform: uppercase;
+    font-style: italic;
+    /* .executive-badge styles are global but handled here for completeness if needed or mixed */
+}

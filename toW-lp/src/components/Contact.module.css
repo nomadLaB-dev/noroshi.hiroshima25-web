@@ -1,0 +1,109 @@
+.footer {
+    padding: 8rem 0;
+    /* py-32 */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.bgGradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(75, 45, 142, 0.3), transparent);
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    max-width: 48rem;
+    /* max-w-3xl */
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.title {
+    font-size: 2.25rem;
+    /* text-4xl */
+    font-weight: 900;
+    margin-bottom: 2rem;
+    font-style: italic;
+    margin-top: 1rem;
+
+    background: linear-gradient(135deg, #a78bfa, var(--sanfrecce-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 3rem;
+        /* md:text-5xl */
+    }
+}
+
+.description {
+    color: #94a3b8;
+    /* text-slate-400 */
+    margin-bottom: 4rem;
+    font-size: 1.125rem;
+    /* text-lg */
+    line-height: 1.625;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+@media (min-width: 640px) {
+    .actions {
+        flex-direction: row;
+    }
+}
+
+.buttonMain {
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    padding: 1.5rem 3rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    /* shadow-xl */
+    border: none;
+}
+
+.buttonMain:hover {
+    background-color: var(--sanfrecce-gold);
+}
+
+.buttonSecond {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-weight: 700;
+    padding: 1.5rem 3rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.buttonSecond:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.copyright {
+    margin-top: 6rem;
+    font-size: 12px;
+    color: #475569;
+    /* text-slate-600 */
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-weight: 700;
+}
