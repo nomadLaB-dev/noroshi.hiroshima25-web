@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+:root {
+  /* Sanfrecce Hiroshima Colors */
+  --sanfrecce-purple: #4b2d8e;
+  --sanfrecce-purple-light: #5d3bb1;
+  --sanfrecce-gold: #e6b422;
+  --sanfrecce-gold-dark: #b88d18;
+  --bg-dark: #0f0a1a;
+
+  --foreground: #f8fafc;
+  --background: var(--bg-dark);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Animations from original file */
+@keyframes pulse-bg {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1.3);
+    opacity: 0.8;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Utility Classes converted from original style block */
+.text-sanfrecce-gradient {
+  background: linear-gradient(135deg, #a78bfa, var(--sanfrecce-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-8px);
+  border-color: var(--sanfrecce-gold);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(75, 45, 142, 0.2);
+}
+
+.gold-border {
+  border: 2px solid var(--sanfrecce-gold);
+  box-shadow: 0 0 30px rgba(230, 180, 34, 0.15);
+}
+
+.executive-badge {
+  background: rgba(75, 45, 142, 0.3);
+  border: 1px solid var(--sanfrecce-purple-light);
+  color: #d8b4fe;
+}
+
+.added-value-badge {
+  background: linear-gradient(90deg, var(--sanfrecce-purple), var(--sanfrecce-gold));
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.section-line {
+  width: 0;
+  height: 4px;
+  background: var(--sanfrecce-gold);
+  margin: 1.5rem auto 0;
+  transition: width 1s ease 0.5s;
+}
+
+.reveal.active .section-line {
+  width: 80px;
+}
+
+.section-title-en {
+  font-size: 0.875rem;
+  letter-spacing: 0.4em;
+  color: var(--sanfrecce-gold);
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.hero-bg-anim {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(75, 45, 142, 0.15) 0%, transparent 50%);
+  animation: pulse-bg 8s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+.float-anim {
+  animation: float 6s ease-in-out infinite;
+}

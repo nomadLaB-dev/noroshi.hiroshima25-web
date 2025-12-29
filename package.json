@@ -1,20 +1,27 @@
 {
-    "name": "noroshi",
-    "version": "1.0.0",
-    "description": "Noroshi Landing Pages - Unified Development Environment",
-    "private": true,
-    "scripts": {
-        "dev": "concurrently \"npm run dev:toB\" \"npm run dev:toC\" \"npm run dev:toW\"",
-        "dev:toB": "cd toB-lp && npm run dev",
-        "dev:toC": "cd toC-lp && npm run dev",
-        "dev:toW": "cd toW-lp && npm run dev",
-        "build": "npm run build:toB && npm run build:toC && npm run build:toW",
-        "build:toB": "cd toB-lp && npm run build",
-        "build:toC": "cd toC-lp && npm run build",
-        "build:toW": "cd toW-lp && npm run build",
-        "install:all": "npm install && cd toB-lp && npm install && cd ../toC-lp && npm install && cd ../toW-lp && npm install"
-    },
-    "devDependencies": {
-        "concurrently": "^9.1.0"
-    }
+  "name": "unified-lp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "lucide-react": "^0.562.0",
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
 }

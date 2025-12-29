@@ -1,0 +1,162 @@
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+    /* pt-24 */
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* .bgAnim is handled by global .hero-bg-anim */
+
+.bgGradient1 {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(75, 45, 142, 0.13) 0%, transparent 40%);
+}
+
+.bgGradient2 {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 70%, rgba(230, 180, 34, 0.07) 0%, transparent 40%);
+}
+
+.content {
+    max-width: 64rem;
+    /* max-w-5xl */
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    /* text-xl */
+    font-weight: 700;
+    color: #cbd5e1;
+    /* text-slate-300 */
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+    /* tracking-widest */
+}
+
+@media (min-width: 768px) {
+    .subtitle {
+        font-size: 1.5rem;
+        /* md:text-2xl */
+    }
+}
+
+.title {
+    font-size: 3rem;
+    /* text-5xl */
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 4rem;
+        /* md:text-6xl */
+    }
+}
+
+.brMobile {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .brMobile {
+        display: none;
+    }
+}
+
+.taglineWrapper {
+    font-size: 1.125rem;
+    /* lg */
+    font-weight: 500;
+    color: #94a3b8;
+    /* slate-400 */
+    margin-bottom: 3rem;
+    letter-spacing: 0.05em;
+    /* tracking-wider */
+}
+
+@media (min-width: 768px) {
+    .taglineWrapper {
+        font-size: 1.25rem;
+        /* xl */
+    }
+}
+
+.taglineMain {
+    color: #e2e8f0;
+    /* slate-200 */
+    font-size: 1.5rem;
+    /* 2xl */
+    display: block;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .taglineMain {
+        font-size: 1.875rem;
+        /* 3xl */
+    }
+}
+
+.description {
+    font-size: 0.875rem;
+    /* sm */
+    color: #64748b;
+    /* slate-500 */
+    margin-bottom: 3rem;
+    max-width: 42rem;
+    /* max-w-2xl */
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.625;
+}
+
+@media (min-width: 768px) {
+    .description {
+        font-size: 1rem;
+        /* base */
+    }
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+@media (min-width: 640px) {
+    .actions {
+        flex-direction: row;
+    }
+}
+
+.ctaButton {
+    background-color: var(--sanfrecce-gold);
+    color: white;
+    font-size: 1.125rem;
+    /* lg */
+    font-weight: 900;
+    padding: 1rem 3rem;
+    border-radius: 9999px;
+    box-shadow: 0 0 30px rgba(230, 180, 34, 0.3);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.ctaButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(230, 180, 34, 0.5);
+}
