@@ -10,7 +10,7 @@ export default function Home() {
           </span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-300 mb-16">
-          統合ランディングページ
+          総合ランディングページ
         </p>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
